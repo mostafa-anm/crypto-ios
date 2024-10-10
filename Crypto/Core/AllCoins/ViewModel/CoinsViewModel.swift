@@ -14,18 +14,18 @@ class CoinsViewModel: ObservableObject {
     private let service = CoinDataService()
 
     init() {
-        fetchCoins()
+        Task { await fetchCoins() }
     }
 
-    func fetchCoins() {
-        service.fetchCoins { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let coins):
-                    self?.coins = coins
-                case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
-                }
+    @MainActor
+    func fetchCoins() async {
+        do {
+            coins = try await service.fetchCoins()
+        } catch {
+            if let error = error as? CoinAPIError {
+                errorMessage = error.customDescription
+            } else {
+                errorMessage = error.localizedDescription
             }
         }
     }
