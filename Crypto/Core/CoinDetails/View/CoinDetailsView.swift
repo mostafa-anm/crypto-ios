@@ -31,8 +31,8 @@ struct CoinDetailsView: View {
                     .padding(.vertical)
             }
         }
-        .onAppear {
-            Task { await viewModel.fetchCoinDetails() }
+        .task {
+            await viewModel.fetchCoinDetails()
         }
         .padding()
     }

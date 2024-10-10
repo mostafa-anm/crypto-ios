@@ -21,13 +21,13 @@ class CoinDetailsViewModel: ObservableObject {
     
     @MainActor
     func fetchCoinDetails() async {
-//        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
         do {
             let details = try await service.fetchCoinDetails(id: coinId)
             print("DEBUG: details \(details!.id)")
             coinDetails = details
         } catch {
-            print("DEBUG: prob in fetching coin details")
+            print("DEBUG: \(error.localizedDescription)")
         }
     }
 }
