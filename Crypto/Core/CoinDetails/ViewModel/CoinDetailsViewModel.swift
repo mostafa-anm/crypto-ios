@@ -14,7 +14,6 @@ class CoinDetailsViewModel: ObservableObject {
     @Published var coinDetails: CoinDetails?
     
     init(coinId: String) {
-        print("did init")
         self.coinId = coinId
 //        Task { await fetchCoinDetails() }
     }
