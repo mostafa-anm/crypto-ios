@@ -8,12 +8,12 @@
 import Foundation
 
 class CoinDetailsViewModel: ObservableObject {
-    private let service: CoinDataService
+    private let service: CoinDataServiceProtocol
     private let coinId: String
     
     @Published var coinDetails: CoinDetails?
     
-    init(coinId: String, service: CoinDataService) {
+    init(coinId: String, service: CoinDataServiceProtocol) {
         self.coinId = coinId
         self.service = service
 //        Task { await fetchCoinDetails() }
