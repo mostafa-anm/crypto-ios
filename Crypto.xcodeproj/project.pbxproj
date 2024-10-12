@@ -23,6 +23,8 @@
 		8506DBD22CB974C1008B8483 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506DBD12CB974C1008B8483 /* MockCoinService.swift */; };
 		8506DBDA2CB97C4A008B8483 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506DBD92CB97C4A008B8483 /* CryptoTests.swift */; };
 		8506DBE12CB97C6A008B8483 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506DBE02CB97C6A008B8483 /* TestData.swift */; };
+		857D39E92CB98450008FFE3E /* CoinsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D39E82CB98450008FFE3E /* CoinsViewModelTests.swift */; };
+		857D39EC2CBA9F1C008FFE3E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506DBE02CB97C6A008B8483 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		8506DBD72CB97C4A008B8483 /* CryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8506DBD92CB97C4A008B8483 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		8506DBE02CB97C6A008B8483 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		857D39E82CB98450008FFE3E /* CoinsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,7 @@
 			children = (
 				8506DBD92CB97C4A008B8483 /* CryptoTests.swift */,
 				8506DBE02CB97C6A008B8483 /* TestData.swift */,
+				857D39E82CB98450008FFE3E /* CoinsViewModelTests.swift */,
 			);
 			path = CryptoTests;
 			sourceTree = "<group>";
@@ -346,6 +350,7 @@
 				8506DBC12CB831EC008B8483 /* CoinDetailsView.swift in Sources */,
 				8506DBD02CB95B72008B8483 /* CoinDetailsCache.swift in Sources */,
 				8506DBC92CB84250008B8483 /* CoinDetailsViewModel.swift in Sources */,
+				857D39EC2CBA9F1C008FFE3E /* TestData.swift in Sources */,
 				8506DBBF2CB6A882008B8483 /* CoinAPIError.swift in Sources */,
 				8506DBBB2CB557CE008B8483 /* CoinDataService.swift in Sources */,
 				8506DBCD2CB95143008B8483 /* HTTPDataDownloader.swift in Sources */,
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857D39E92CB98450008FFE3E /* CoinsViewModelTests.swift in Sources */,
 				8506DBDA2CB97C4A008B8483 /* CryptoTests.swift in Sources */,
 				8506DBE12CB97C6A008B8483 /* TestData.swift in Sources */,
 			);
