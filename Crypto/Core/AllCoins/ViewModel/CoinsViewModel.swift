@@ -15,13 +15,13 @@ class CoinsViewModel: ObservableObject {
 
     init(service: CoinDataServiceProtocol) {
         self.service = service
-        Task { await fetchCoins() }
     }
 
     @MainActor
     func fetchCoins() async {
         do {
-            coins = try await service.fetchCoins()
+            let coins = try await service.fetchCoins()
+            self.coins.append(contentsOf: coins)
         } catch {
             if let error = error as? CoinAPIError {
                 errorMessage = error.customDescription
